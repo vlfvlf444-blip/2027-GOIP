@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2027학년도 경남 고등학교 입학전형 안내</title>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Round+Square:wght@400;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #4F6DF5;
+  --primary-light: #E8EEFF;
+  --primary-dark: #2E4BCC;
+  --accent: #FF6B6B;
+  --accent-light: #FFF0F0;
+  --success: #22C55E;
+  --success-light: #E8FFF0;
+  --warning: #F59E0B;
+  --warning-light: #FFFBEB;
+  --purple: #8B5CF6;
+  --purple-light: #F3EEFF;
+  --teal: #14B8A6;
+  --teal-light: #E0FAFA;
+  --pink: #EC4899;
+  --pink-light: #FDF2F8;
+  --bg: #F7F8FF;
+  --card: #FFFFFF;
+  --text: #1E2340;
+  --text-sub: #5A6080;
+  --text-muted: #9AA0BE;
+  --border: #E8ECFF;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 4px 24px rgba(79,109,245,0.10);
+  --shadow-hover: 0 8px 32px rgba(79,109,245,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: linear-gradient(135deg, #4F6DF5 0%, #7C3AED 50%, #EC4899 100%);
+  color: white;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 300px; height: 300px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: 40px;
+  width: 200px; height: 200px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+}
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 24px 40px;
+  position: relative;
+  z-index: 1;
+}
+.header-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 100px;
+  padding: 6px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+.header h1 {
+  font-family: 'Nanum Round Square', sans-serif;
+  font-size: clamp(26px, 5vw, 42px);
+  font-weight: 900;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+.header-sub {
+  font-size: 16px;
+  opacity: 0.88;
+  margin-bottom: 28px;
+}
+.header-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.header-chip {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.header-chip:hover { background: rgba(255,255,255,0.32); }
+
+/* ===== NAV TABS ===== */
+.nav-wrap {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+.nav-tabs {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 16px;
+}
+.nav-tabs::-webkit-scrollbar { display: none; }
+.nav-tab {
+  flex-shrink: 0;
+  padding: 16px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-sub);
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+.nav-tab:hover { color: var(--primary); }
+
+/* ===== MAIN ===== */
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+.section { display: none; animation: fadeIn 0.3s ease; }
+.section.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  font-family: 'Nanum Round Square', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--text);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-title .icon-circle {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.section-desc {
+  color: var(--text-sub);
+  font-size: 15px;
+  margin-bottom: 28px;
+  padding-left: 46px;
+}
+
+/* ===== CARDS GRID ===== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.school-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  padding: 22px 18px;
+  cursor: pointer;
+  transition: all 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+.school-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.school-card.blue::before { background: var(--primary); }
+.school-card.teal::before { background: var(--teal); }
+.school-card.purple::before { background: var(--purple); }
+.school-card.pink::before { background: var(--pink); }
+
+.school-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: transparent;
+}
+.school-card .card-emoji { font-size: 32px; margin-bottom: 12px; }
+.school-card .card-title {
+  font-size: 17px;
+  font-weight: 900;
+  font-family: 'Nanum Round Square', sans-serif;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.school-card .card-count {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.blue .card-count { background: var(--primary-light); color: var(--primary-dark); }
+.teal .card-count { background: var(--teal-light); color: #0D7A6E; }
+.purple .card-count { background: var(--purple-light); color: #5B21B6; }
+.pink .card-count { background: var(--pink-light); color: #BE185D; }
+
+.school-card .card-desc {
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.5;
+}
+.card-arrow {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  font-size: 18px;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+.school-card:hover .card-arrow { opacity: 1; }
+
+/* ===== DETAIL PANEL ===== */
+.detail-panel {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 28px;
+  margin-top: 20px;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+.detail-panel.open { display: block; }
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.detail-header .emoji { font-size: 28px; }
+.detail-header h3 {
+  font-family: 'Nanum Round Square', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+}
+.detail-close {
+  margin-left: auto;
+  background: var(--bg);
+  border: none;
+  border-radius: 8px;
+  width: 32px; height: 32px;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--text-sub);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.detail-close:hover { background: var(--border); }
+
+.school-list {
+  list-style: none;
+}
+.school-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.school-list li:last-child { border-bottom: none; }
+.school-list li::before {
+  content: '▸';
+  color: var(--primary);
+  font-size: 12px;
+}
+
+/* ===== ALERT BOX ===== */
+.alert {
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.alert-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.alert.danger { background: #FFF5F5; border: 1px solid #FECACA; color: #7F1D1D; }
+.alert.warning { background: var(--warning-light); border: 1px solid #FDE68A; color: #78350F; }
+.alert.info { background: var(--primary-light); border: 1px solid #C7D2FE; color: #1E40AF; }
+.alert.success { background: var(--success-light); border: 1px solid #A7F3D0; color: #064E3B; }
+.alert strong { display: block; font-weight: 700; margin-bottom: 4px; }
+
+/* ===== TIMELINE ===== */
+.timeline {
+  position: relative;
+  padding-left: 20px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 24px 24px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--primary);
+}
+.timeline-item.done::before { background: var(--success); box-shadow: 0 0 0 2px var(--success); }
+.timeline-item.upcoming::before { background: var(--warning); box-shadow: 0 0 0 2px var(--warning); }
+
+.tl-date {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.tl-school {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.tl-period {
+  font-size: 13px;
+  color: var(--text-sub);
+}
+.tl-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 100px;
+  margin-top: 6px;
+}
+
+/* ===== SCHEDULE TABLE ===== */
+.schedule-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+.schedule-table th {
+  background: var(--primary);
+  color: white;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 13px;
+}
+.schedule-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  background: var(--card);
+}
+.schedule-table tr:last-child td { border-bottom: none; }
+.schedule-table tr:nth-child(even) td { background: #FAFBFF; }
+.schedule-table .school-type {
+  font-weight: 700;
+  color: var(--text);
+}
+.schedule-table .date {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+/* ===== QUIZ / DIAGNOSIS ===== */
+.quiz-wrap {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 32px 28px;
+}
+.quiz-step { display: none; }
+.quiz-step.active { display: block; animation: fadeIn 0.3s ease; }
+
+.quiz-progress {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 28px;
+}
+.quiz-dot {
+  flex: 1;
+  height: 4px;
+  border-radius: 100px;
+  background: var(--border);
+  transition: background 0.3s;
+}
+.quiz-dot.done { background: var(--primary); }
+.quiz-dot.active { background: var(--accent); }
+
+.quiz-q {
+  font-family: 'Nanum Round Square', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.quiz-sub {
+  font-size: 14px;
+  color: var(--text-sub);
+  margin-bottom: 24px;
+}
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.quiz-option {
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s;
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--card);
+}
+.quiz-option:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  color: var(--primary-dark);
+}
+.quiz-option.selected {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+.quiz-option .opt-emoji { font-size: 22px; }
+
+/* ===== RESULT CARD ===== */
+.result-card {
+  border-radius: var(--radius);
+  padding: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.result-emoji { font-size: 56px; margin-bottom: 12px; }
+.result-type {
+  font-family: 'Nanum Round Square', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.result-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.88;
+}
+.result-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+}
+.result-tag {
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* ===== DOUBLE APP CHECK ===== */
+.check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.check-item {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+.check-item:hover { border-color: var(--accent); }
+.check-item.checked { border-color: var(--success); background: var(--success-light); }
+.check-box {
+  width: 24px; height: 24px;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  transition: all 0.2s;
+  background: white;
+}
+.check-item.checked .check-box {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+.check-status {
+  background: var(--card);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  text-align: center;
+  border: 2px solid var(--border);
+  transition: all 0.3s;
+}
+.check-status.ok { border-color: var(--success); background: var(--success-light); }
+.check-status.warn { border-color: var(--accent); background: #FFF5F5; }
+
+/* ===== IMPORTANT INFO ===== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.info-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 22px;
+  transition: box-shadow 0.2s;
+}
+.info-card:hover { box-shadow: var(--shadow); }
+.info-card .ic-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.info-card .ic-icon {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.info-card .ic-title { font-weight: 900; font-size: 15px; font-family: 'Nanum Round Square', sans-serif; }
+.info-card ul {
+  padding-left: 16px;
+  list-style: none;
+}
+.info-card ul li {
+  font-size: 13px;
+  color: var(--text-sub);
+  padding: 4px 0;
+  position: relative;
+  padding-left: 14px;
+  line-height: 1.5;
+}
+.info-card ul li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  font-weight: 900;
+  font-size: 16px;
+}
+.info-card ul li strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 32px 16px;
+  color: var(--text-muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+  background: var(--card);
+}
+footer a { color: var(--primary); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* ===== BUTTON ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 100px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(79,109,245,0.4); }
+.btn-outline { background: white; color: var(--primary); border: 2px solid var(--primary); }
+.btn-outline:hover { background: var(--primary-light); }
+.btn-sm { padding: 8px 18px; font-size: 13px; }
+
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.flex-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ===== DIVIDER ===== */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 28px 0;
+}
+
+/* ===== GUARANTEE BOX ===== */
+.guarantee {
+  background: linear-gradient(135deg, #4F6DF5 0%, #7C3AED 100%);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  color: white;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.guarantee .g-icon { font-size: 40px; flex-shrink: 0; }
+.guarantee h3 { font-family: 'Nanum Round Square', sans-serif; font-size: 17px; font-weight: 900; margin-bottom: 6px; }
+.guarantee p { font-size: 13px; opacity: 0.88; line-height: 1.6; }
+
+@media print {
+  .header, .nav-wrap, .section-title, .section-desc, .alert, footer,
+  button, .btn, #f-name, #f-gender, #f-middle, #f-memo, #f-class,
+  .school-input, #add-school-btn, [style*="dashed"] { display: none !important; }
+  .section { display: none !important; }
+  #tab-survey { display: block !important; }
+  #form-preview { display: block !important; border: none !important; }
+  #form-preview-content { border: 1px solid #ccc !important; background: white !important; }
+  body { background: white; }
+  .main { padding: 0; max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .header-inner { padding: 36px 16px 32px; }
+  .cards-grid { grid-template-columns: 1fr 1fr; }
+  .info-grid { grid-template-columns: 1fr; }
+  .guarantee { flex-direction: column; text-align: center; }
+  .quiz-wrap { padding: 24px 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="header-badge">📋 경상남도교육청 공식 안내</div>
+    <h1>2027학년도<br>고등학교 입학전형 안내</h1>
+    <p class="header-sub">학생·학부모·선생님 모두를 위한 경남 고입 가이드</p>
+    <div class="header-chips">
+      <span class="header-chip">🏫 학교유형 안내</span>
+      <span class="header-chip">📅 원서접수 일정</span>
+      <span class="header-chip">⚠️ 이중지원 체크</span>
+      <span class="header-chip">🎯 나에게 맞는 학교</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showTab('types')">🏫 학교 유형</button>
+    <button class="nav-tab" onclick="showTab('junhwa')">🏙️ 김해 평준화 지원</button>
+    <button class="nav-tab" onclick="showTab('schedule')">📅 원서 일정</button>
+    <button class="nav-tab" onclick="showTab('double')">⚠️ 이중지원 체크</button>
+    <button class="nav-tab" onclick="showTab('quiz')">🎯 나에게 맞는 학교</button>
+    <button class="nav-tab" onclick="showTab('info')">📌 꼭 알아야 할 것</button>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- ===== TAB 1: 학교 유형 ===== -->
+  <div id="tab-types" class="section active">
+    <div class="section-title">
+      <div class="icon-circle" style="background:#E8EEFF;">🏫</div>
+      고등학교 유형 알아보기
+    </div>
+    <p class="section-desc">경남에는 총 201개 고등학교가 있어요. 내 적성에 맞는 유형을 찾아보세요!</p>
+
+    <div class="cards-grid">
+      <div class="school-card blue" onclick="toggleDetail('d-ilban')">
+        <div class="card-emoji">📚</div>
+        <div class="card-title">일반고</div>
+        <div class="card-count">경남 150개교</div>
+        <div class="card-desc">다양한 분야의 일반 교육과정 운영. 대학 진학을 원한다면!</div>
+        <div class="card-arrow">›</div>
+      </div>
+      <div class="school-card teal" onclick="toggleDetail('d-tekmok')">
+        <div class="card-emoji">🔬</div>
+        <div class="card-title">특수목적고</div>
+        <div class="card-count">경남 10개교</div>
+        <div class="card-desc">과학고, 외국어고, 예술고, 체육고, 마이스터고</div>
+        <div class="card-arrow">›</div>
+      </div>
+      <div class="school-card purple" onclick="toggleDetail('d-teuksung')">
+        <div class="card-emoji">🎨</div>
+        <div class="card-title">특성화고</div>
+        <div class="card-count">경남 35개교</div>
+        <div class="card-desc">특정 분야 인재양성 또는 체험위주 교육 전문 실시</div>
+        <div class="card-arrow">›</div>
+      </div>
+      <div class="school-card pink" onclick="toggleDetail('d-etc')">
+        <div class="card-emoji">🌟</div>
+        <div class="card-title">각종·기술학교</div>
+        <div class="card-count">경남 6개교</div>
+        <div class="card-desc">각종학교(5), 고등기술학교(1) — 고교 학력 인정</div>
+        <div class="card-arrow">›</div>
+      </div>
+    </div>
+
+    <!-- Detail Panels -->
+    <div id="d-ilban" class="detail-panel">
+      <div class="detail-header">
+        <span class="emoji">📚</span>
+        <div>
+          <h3>일반고 (경남 150개교)</h3>
+          <p style="font-size:13px;color:var(--text-sub)">특정분야가 아닌 다양한 분야에 걸쳐 일반 교육과정 운영</p>
+        </div>
+        <button class="detail-close" onclick="toggleDetail('d-ilban')">✕</button>
+      </div>
+      <div class="alert info">
+        <span class="alert-icon">ℹ️</span>
+        <div>
+          <strong>평준화 지역 일반고</strong>
+          경남 5개 학군(창원 성산·의창구 / 마산 합포·회원구 / 진주시 / 김해시 / 거제시)에서 추첨 배정됩니다. <strong>1개 학군을 선택</strong>하면 그 학군 내 지망순서별로 모든 학교에 지원됩니다.
+        </div>
+      </div>
+      <div class="alert warning">
+        <span class="alert-icon">⭐</span>
+        <div>
+          <strong>자율형 공립고 (4개교)</strong>
+          경남에는 자율형 사립고는 없고, 자율형 공립고 4개교가 있습니다.
+        </div>
+      </div>
+      <div class="alert success">
+        <span class="alert-icon">🏫</span>
+        <div>
+          <strong>학교장전형 일반고 (비평준화 포함)</strong>
+          창원대산고, 창원북면고, 마산삼진고, 진서고, 진주외고, 진영고, 김해대청고, 김해삼문고, 김해수남고, 김해율하고, 장유고 등 11개교는 학교장이 별도 전형 진행
+        </div>
+      </div>
+    </div>
+
+    <div id="d-tekmok" class="detail-panel">
+      <div class="detail-header">
+        <span class="emoji">🔬</span>
+        <div>
+          <h3>특수목적고 (경남 10개교)</h3>
+          <p style="font-size:13px;color:var(--text-sub)">전기고 – 먼저 지원하는 학교</p>
+        </div>
+        <button class="detail-close" onclick="toggleDetail('d-tekmok')">✕</button>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:16px;">
+        <div style="background:var(--teal-light);border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:14px;color:#0D7A6E;margin-bottom:8px;">🧪 과학고 (2)</div>
+          <ul class="school-list"><li>경남과학고</li><li>창원과학고</li></ul>
+        </div>
+        <div style="background:#FFF7E6;border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:14px;color:#92400E;margin-bottom:8px;">🌍 외국어고 (2)</div>
+          <ul class="school-list"><li>경남외고</li><li>김해외고</li></ul>
+        </div>
+        <div style="background:#FDF2F8;border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:14px;color:#BE185D;margin-bottom:8px;">🎭 예술고 (1)</div>
+          <ul class="school-list"><li>경남예술고</li></ul>
+        </div>
+        <div style="background:var(--success-light);border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:14px;color:#065F46;margin-bottom:8px;">⚽ 체육고 (1)</div>
+          <ul class="school-list"><li>경남체육고</li></ul>
+        </div>
+      </div>
+      <div style="background:var(--primary-light);border-radius:10px;padding:16px;">
+        <div style="font-weight:700;font-size:14px;color:var(--primary-dark);margin-bottom:8px;">🔧 마이스터고 (4개교)</div>
+        <ul class="school-list">
+          <li>공군항공과학고</li><li>거제공고</li><li>삼천포공고</li><li>한국나노마이스터고</li>
+        </ul>
+      </div>
+      <div class="alert info mt-16">
+        <span class="alert-icon">💡</span>
+        <div><strong>국제고 (0)</strong> 경남에는 국제고가 없습니다. 타 시도 국제고에 지원하는 경우 이중지원 규정을 꼭 확인하세요.</div>
+      </div>
+    </div>
+
+    <div id="d-teuksung" class="detail-panel">
+      <div class="detail-header">
+        <span class="emoji">🎨</span>
+        <div>
+          <h3>특성화고 (경남 35개교)</h3>
+          <p style="font-size:13px;color:var(--text-sub)">전기고 – 인재양성(31) + 체험위주(4)</p>
+        </div>
+        <button class="detail-close" onclick="toggleDetail('d-teuksung')">✕</button>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+        <div style="background:var(--purple-light);border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:14px;color:#5B21B6;margin-bottom:8px;">🎓 인재양성 특성화고 (31개교)</div>
+          <p style="font-size:13px;color:var(--text-sub);">소질·적성·능력이 유사한 학생 대상으로 특정 분야 인재 양성 목적. 학교명은 <strong>경남고입포털</strong>에서 확인하세요.</p>
+        </div>
+        <div style="background:var(--teal-light);border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:14px;color:#0D7A6E;margin-bottom:8px;">🌿 체험위주 특성화고 (4개교)</div>
+          <ul class="school-list"><li>태봉고</li><li>간디고</li><li>지리산고</li><li>합천평화고</li></ul>
+        </div>
+      </div>
+      <div class="alert warning mt-16">
+        <span class="alert-icon">⚠️</span>
+        <div><strong>인재양성 특성화고 지원 특이사항</strong>
+        마이스터고 불합격자는 인재양성 특성화고에 추가 지원 가능합니다. 특별전형 불합격자는 일반전형에 지원 가능합니다.</div>
+      </div>
+    </div>
+
+    <div id="d-etc" class="detail-panel">
+      <div class="detail-header">
+        <span class="emoji">🌟</span>
+        <div>
+          <h3>각종학교·고등기술학교</h3>
+          <p style="font-size:13px;color:var(--text-sub)">고등학교 학력 인정 / 전기고</p>
+        </div>
+        <button class="detail-close" onclick="toggleDetail('d-etc')">✕</button>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+        <div style="background:#FFF7E6;border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:14px;color:#92400E;margin-bottom:8px;">🎭 각종학교 (5개교)</div>
+          <ul class="school-list"><li>거창연극고</li><li>경남고성음악고</li><li>김해금곡고</li><li>남해보물섬고</li><li>밀양영화고</li></ul>
+        </div>
+        <div style="background:var(--bg);border-radius:10px;padding:16px;">
+          <div style="font-weight:700;font-size:14px;color:var(--text);margin-bottom:8px;">⚙️ 고등기술학교 (1개교)</div>
+          <ul class="school-list"><li>경남전자고</li></ul>
+          <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">국민생활에 직접 필요한 직업기술교육 학교</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 전기/후기 구분 -->
+    <div class="divider"></div>
+    <div class="section-title" style="font-size:18px;margin-bottom:12px;">
+      <div class="icon-circle" style="background:#E8FFF0;">⏰</div>
+      전기고 vs 후기고 구분
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:24px;">
+      <div style="background:var(--card);border-radius:var(--radius);border:2px solid #BFDBFE;padding:22px;">
+        <div style="font-size:24px;margin-bottom:10px;">⚡</div>
+        <div style="font-weight:900;font-size:17px;font-family:'Nanum Round Square',sans-serif;color:#1E40AF;margin-bottom:12px;">전기고 (먼저 모집)</div>
+        <ul style="font-size:13px;color:var(--text-sub);padding-left:0;list-style:none;">
+          <li style="padding:3px 0;">▸ 특목고 (예술고, 체육고, 과학고, 마이스터고)</li>
+          <li style="padding:3px 0;">▸ 특성화고 (인재양성, 체험위주, 일반고 특성화과)</li>
+          <li style="padding:3px 0;">▸ 각종학교</li>
+          <li style="padding:3px 0;">▸ 고등기술학교</li>
+        </ul>
+      </div>
+      <div style="background:var(--card);border-radius:var(--radius);border:2px solid #A7F3D0;padding:22px;">
+        <div style="font-size:24px;margin-bottom:10px;">🌿</div>
+        <div style="font-weight:900;font-size:17px;font-family:'Nanum Round Square',sans-serif;color:#065F46;margin-bottom:12px;">후기고 (나중에 모집)</div>
+        <ul style="font-size:13px;color:var(--text-sub);padding-left:0;list-style:none;">
+          <li style="padding:3px 0;">▸ 외국어고</li>
+          <li style="padding:3px 0;">▸ 일반고 (평준화·비평준화)</li>
+        </ul>
+        <div class="alert success" style="margin-top:14px;padding:10px 12px;font-size:12px;">
+          <span>✅</span>
+          <div>전기고 불합격 확정 시 후기고 지원 가능!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert danger">
+      <span class="alert-icon">🚨</span>
+      <div>
+        <strong>핵심 규칙 — 반드시 기억!</strong>
+        전기고에 합격한 자는 등록 여부에 관계없이 후기고 지원이 불가합니다. 1개교에 합격하면 2027학년도 어떤 전형에도 지원할 수 없어요!
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TAB 2: 김해 평준화 지원 ===== -->
+  <div id="tab-junhwa" class="section">
+    <div class="section-title">
+      <div class="icon-circle" style="background:#E8EEFF;">🏙️</div>
+      김해시 평준화 일반고 지원 방법
+    </div>
+    <p class="section-desc">김해시는 <strong>4학군(평준화 지역)</strong>으로, 12개 일반고 중 9개 학교를 1순위~9순위로 지망해 지원합니다.</p>
+
+    <div class="alert info">
+      <span class="alert-icon">📋</span>
+      <div>
+        <strong>원서 작성 핵심 규칙</strong>
+        원서에 9개 학교를 <strong>1순위~9순위</strong>까지 작성합니다. 남학생은 남고·공학 중 9개, 여학생은 여고·공학 중 9개를 선택할 수 있어요.
+      </div>
+    </div>
+
+    <!-- 학교 목록 카드 3종 -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-bottom:28px;">
+
+      <!-- 공학 -->
+      <div style="background:var(--card);border-radius:var(--radius);border:2px solid #C7D2FE;overflow:hidden;">
+        <div style="background:linear-gradient(135deg,#4F6DF5,#7C3AED);color:white;padding:16px 18px;">
+          <div style="font-size:22px;margin-bottom:4px;">👫</div>
+          <div style="font-family:'Nanum Round Square',sans-serif;font-weight:900;font-size:16px;">남녀공학</div>
+          <div style="font-size:12px;opacity:.85;margin-top:2px;">6개교 · 남녀 모두 지원 가능</div>
+        </div>
+        <ul style="padding:14px 18px;list-style:none;">
+          <li style="padding:7px 0;border-bottom:1px solid var(--border);font-size:14px;display:flex;align-items:center;gap:8px;"><span style="color:var(--primary);font-weight:700;font-size:12px;background:var(--primary-light);border-radius:100px;padding:2px 8px;">공학</span>구산고등학교</li>
+          <li style="padding:7px 0;border-bottom:1px solid var(--border);font-size:14px;display:flex;align-items:center;gap:8px;"><span style="color:var(--primary);font-weight:700;font-size:12px;background:var(--primary-light);border-radius:100px;padding:2px 8px;">공학</span>가야고등학교</li>
+          <li style="padding:7px 0;border-bottom:1px solid var(--border);font-size:14px;display:flex;align-items:center;gap:8px;"><span style="color:var(--primary);font-weight:700;font-size:12px;background:var(--primary-light);border-radius:100px;padding:2px 8px;">공학</span>경원고등학교</li>
+          <li style="padding:7px 0;border-bottom:1px solid var(--border);font-size:14px;display:flex;align-items:center;gap:8px;"><span style="color:var(--primary);font-weight:700;font-size:12px;background:var(--primary-light);border-radius:100px;padding:2px 8px;">공학</span>삼방고등학교</li>
+          <li style="padding:7px 0;border-bottom:1px solid var(--border);font-size:14px;display:flex;align-items:center;gap:8px;"><span style="color:var(--primary);font-weight:700;font-size:12px;background:var(--primary-light);border-radius:100px;padding:2px 8px;">공학</span>영운고등학교</li>
+          <li style="padding:7px 0;font-size:14px;display:flex;align-items:center;gap:8px;"><span style="color:var(--primary);font-weight:700;font-size:12px;background:var(--primary-light);border-radius:100px;padding:2px 8px;">공학</span>제일고등학교</li>
+        </ul>
+      </div>
+
+      <!-- 남고 -->
+      <div style="background:var(--card);border-radius:var(--radius);border:2px solid #BFDBFE;overflow:hidden;">
+        <div style="background:linear-gradient(135deg,#2563EB,#1E40AF);color:white;padding:16px 18px;">
+          <div style="font-size:22px;margin-bottom:4px;">🧑</div>
+          <div style="font-family:'Nanum Round Square',sans-serif;font-weight:900;font-size:16px;">남자고등학교</div>
+          <div style="font-size:12px;opacity:.85;margin-top:2px;">3개교 · 남학생만 지원 가능</div>
+        </div>
+        <ul style="padding:14px 18px;list-style:none;">
+          <li style="padding:7px 0;border-bottom:1px solid var(--border);font-size:14px;display:flex;align-items:center;gap:8px;"><span style="color:#1E40AF;font-weight:700;font-size:12px;background:#DBEAFE;border-radius:100px;padding:2px 8px;">남고</span>김해고등학교</li>
+          <li style="padding:7px 0;border-bottom:1px solid var(--border);font-size:14px;display:flex;align-items:center;gap:8px;"><span style="color:#1E40AF;font-weight:700;font-size:12px;background:#DBEAFE;border-radius:100px;padding:2px 8px;">남고</span>분성고등학교</li>
+          <li style="padding:7px 0;font-size:14px;display:flex;align-items:center;gap:8px;"><span style="color:#1E40AF;font-weight:700;font-size:12px;background:#DBEAFE;border-radius:100px;padding:2px 8px;">남고</span>임호고등학교</li>
+        </ul>
+      </div>
+
+      <!-- 여고 -->
+      <div style="background:var(--card);border-radius:var(--radius);border:2px solid #FBCFE8;overflow:hidden;">
+        <div style="background:linear-gradient(135deg,#EC4899,#BE185D);color:white;padding:16px 18px;">
+          <div style="font-size:22px;margin-bottom:4px;">👩</div>
+          <div style="font-family:'Nanum Round Square',sans-serif;font-weight:900;font-size:16px;">여자고등학교</div>
+          <div style="font-size:12px;opacity:.85;margin-top:2px;">3개교 · 여학생만 지원 가능</div>
+        </div>
+        <ul style="padding:14px 18px;list-style:none;">
+          <li style="padding:7px 0;border-bottom:1px solid var(--border);font-size:14px;display:flex;align-items:center;gap:8px;"><span style="color:#BE185D;font-weight:700;font-size:12px;background:#FCE7F3;border-radius:100px;padding:2px 8px;">여고</span>김해여자고등학교</li>
+          <li style="padding:7px 0;border-bottom:1px solid var(--border);font-size:14px;display:flex;align-items:center;gap:8px;"><span style="color:#BE185D;font-weight:700;font-size:12px;background:#FCE7F3;border-radius:100px;padding:2px 8px;">여고</span>분성여자고등학교</li>
+          <li style="padding:7px 0;font-size:14px;display:flex;align-items:center;gap:8px;"><span style="color:#BE185D;font-weight:700;font-size:12px;background:#FCE7F3;border-radius:100px;padding:2px 8px;">여고</span>중앙여자고등학교</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 지원 방법 인터랙티브 섹션 -->
+    <div style="background:var(--card);border-radius:var(--radius);border:1px solid var(--border);padding:28px;margin-bottom:24px;">
+      <div style="font-family:'Nanum Round Square',sans-serif;font-weight:900;font-size:18px;margin-bottom:6px;">🖊️ 원서 지망 순서 작성 방법</div>
+      <p style="font-size:14px;color:var(--text-sub);margin-bottom:22px;">성별을 선택하면 지원 가능한 학교 목록과 작성 예시를 볼 수 있어요.</p>
+
+      <div style="display:flex;gap:10px;margin-bottom:22px;">
+        <button class="btn btn-outline btn-sm" id="btn-male" onclick="selectGender('male')" style="flex:1;justify-content:center;">🧑 남학생</button>
+        <button class="btn btn-outline btn-sm" id="btn-female" onclick="selectGender('female')" style="flex:1;justify-content:center;">👩 여학생</button>
+      </div>
+
+      <div id="gender-guide" style="display:none;">
+        <div style="margin-bottom:16px;">
+          <div style="font-size:13px;font-weight:700;color:var(--text-muted);letter-spacing:.5px;margin-bottom:8px;">지원 가능한 학교 목록</div>
+          <div id="school-chips" style="display:flex;flex-wrap:wrap;gap:8px;"></div>
+        </div>
+        <div style="background:var(--bg);border-radius:var(--radius-sm);padding:18px;margin-top:16px;">
+          <div style="font-size:13px;font-weight:700;color:var(--text-muted);margin-bottom:12px;">📝 원서 작성 예시 (9개 학교 지망)</div>
+          <div id="rank-example" style="display:flex;flex-direction:column;gap:6px;"></div>
+          <div style="font-size:12px;color:var(--text-muted);margin-top:12px;">※ 위 예시는 참고용입니다. 실제 지망 순서는 학생 본인이 직접 결정하세요.</div>
+        </div>
+      </div>
+
+      <div id="gender-placeholder" style="text-align:center;padding:24px 0;color:var(--text-muted);">
+        <div style="font-size:36px;margin-bottom:8px;">☝️</div>
+        <div style="font-size:14px;">위에서 성별을 선택해주세요</div>
+      </div>
+    </div>
+
+    <!-- 배정 방식 안내 -->
+    <div style="background:var(--card);border-radius:var(--radius);border:1px solid var(--border);padding:28px;margin-bottom:24px;">
+      <div style="font-family:'Nanum Round Square',sans-serif;font-weight:900;font-size:18px;margin-bottom:20px;">🎲 평준화 배정 방식 이해하기</div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--border);">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;flex-shrink:0;">1</div>
+          <div>
+            <div style="font-weight:700;font-size:15px;margin-bottom:4px;">원서에 9개 학교를 1~9순위로 작성</div>
+            <div style="font-size:13px;color:var(--text-sub);">12개 중 9개를 선택해 지망 순서를 기재합니다. 단, 남고·여고는 해당 성별만 선택 가능합니다.</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--border);">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;flex-shrink:0;">2</div>
+          <div>
+            <div style="font-weight:700;font-size:15px;margin-bottom:4px;">내신 성적 순으로 배정</div>
+            <div style="font-size:13px;color:var(--text-sub);">내신 석차백분율 성적이 높은 학생부터 지망 순서대로 배정됩니다. 1지망 학교에 자리가 없으면 2지망, 3지망 순으로 배정됩니다.</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--border);">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;flex-shrink:0;">3</div>
+          <div>
+            <div style="font-weight:700;font-size:15px;margin-bottom:4px;">합격자 및 배정학교 발표</div>
+            <div style="font-size:13px;color:var(--text-sub);">합격자 발표: <strong>2027. 1. 8.(금)</strong><br>배정학교 발표: <strong>2027. 1. 15.(금)</strong></div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--success);color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;flex-shrink:0;">✓</div>
+          <div>
+            <div style="font-weight:700;font-size:15px;margin-bottom:4px;">입학 등록</div>
+            <div style="font-size:13px;color:var(--text-sub);">배정된 학교에 입학 등록합니다. 평준화 학군은 모집 정원이 졸업생 수보다 많으므로 진학 못하는 경우는 없습니다.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="alert warning">
+      <span class="alert-icon">⚠️</span>
+      <div>
+        <strong>중요! 지원 자격 확인</strong>
+        현 중3 졸업예정자는 <strong>중학교 소재지</strong>를 기준으로 4학군(김해시)에 지원 가능합니다. 졸업자·학력인정자는 <strong>주소지(실거주지)</strong>가 김해시여야 합니다. 전입 계획이 있는 경우 전입학 제한일(<strong>2026. 10. 31.</strong>)을 반드시 확인하세요!
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== TAB 3: 원서 일정 ===== -->
+  <div id="tab-schedule" class="section">
+    <div class="section-title">
+      <div class="icon-circle" style="background:#FFF7E6;">📅</div>
+      원서 접수일 일정표
+    </div>
+    <p class="section-desc">각 학교 유형별 원서 접수 기간입니다. 놓치지 마세요!</p>
+
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th style="width:35%">학교 구분</th>
+          <th>원서 접수 기간</th>
+          <th style="width:15%">구분</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="school-type">마이스터고</div>
+            <div style="font-size:12px;color:var(--text-muted)">공군항공과학고</div>
+          </td>
+          <td class="date">2026. 7. 13.(월) ~ 7. 17.(금)</td>
+          <td><span class="tl-badge" style="background:#DBEAFE;color:#1E40AF;">전기고</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="school-type">마이스터고</div>
+            <div style="font-size:12px;color:var(--text-muted)">거제공고, 삼천포공고, 한국나노마이스터고</div>
+          </td>
+          <td class="date">2026. 10. 19.(월) ~ 10. 22.(목)</td>
+          <td><span class="tl-badge" style="background:#DBEAFE;color:#1E40AF;">전기고</span></td>
+        </tr>
+        <tr>
+          <td class="school-type">과학고</td>
+          <td class="date">2026. 8. 24.(월) ~ 8. 27.(목)</td>
+          <td><span class="tl-badge" style="background:#D1FAE5;color:#065F46;">전기고</span></td>
+        </tr>
+        <tr>
+          <td class="school-type">체육고</td>
+          <td class="date">2026. 8. 24.(월) ~ 8. 27.(목)</td>
+          <td><span class="tl-badge" style="background:#D1FAE5;color:#065F46;">전기고</span></td>
+        </tr>
+        <tr>
+          <td class="school-type">예술고</td>
+          <td class="date">2026. 10. 12.(월) ~ 10. 15.(목)</td>
+          <td><span class="tl-badge" style="background:#D1FAE5;color:#065F46;">전기고</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="school-type">인재양성 특성화고</div>
+            <div style="font-size:12px;color:var(--text-muted)">특별전형</div>
+          </td>
+          <td class="date">2026. 11. 20.(금) ~ 11. 24.(화)</td>
+          <td><span class="tl-badge" style="background:#EDE9FE;color:#5B21B6;">전기고</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="school-type">인재양성 특성화고</div>
+            <div style="font-size:12px;color:var(--text-muted)">일반전형</div>
+          </td>
+          <td class="date">2026. 11. 27.(금) ~ 12. 1.(화)</td>
+          <td><span class="tl-badge" style="background:#EDE9FE;color:#5B21B6;">전기고</span></td>
+        </tr>
+        <tr>
+          <td class="school-type">체험위주 특성화고</td>
+          <td class="date">2026. 11. 27.(금) ~ 12. 1.(화)</td>
+          <td><span class="tl-badge" style="background:#EDE9FE;color:#5B21B6;">전기고</span></td>
+        </tr>
+        <tr>
+          <td class="school-type">각종학교 · 고등기술학교</td>
+          <td class="date">2026. 11. 27.(금) ~ 12. 1.(화)</td>
+          <td><span class="tl-badge" style="background:#EDE9FE;color:#5B21B6;">전기고</span></td>
+        </tr>
+        <tr>
+          <td class="school-type">외국어고 · 일반고</td>
+          <td class="date">2026. 12. 10.(목) ~ 12. 14.(월)</td>
+          <td><span class="tl-badge" style="background:#FCE7F3;color:#9D174D;">후기고</span></td>
+        </tr>
+        <tr style="background:#FFFBEB;">
+          <td>
+            <div class="school-type">평준화지역 서류제출</div>
+            <div style="font-size:12px;color:var(--text-muted)">체육특기자 (예정)</div>
+          </td>
+          <td class="date">2026. 9. 28.(월) ~ 9. 30.(수)</td>
+          <td><span class="tl-badge" style="background:#FEF3C7;color:#78350F;">별도</span></td>
+        </tr>
+        <tr style="background:#FFFBEB;">
+          <td>
+            <div class="school-type">평준화지역 서류제출</div>
+            <div style="font-size:12px;color:var(--text-muted)">특례입학 (예정)</div>
+          </td>
+          <td class="date">2026. 11. 19.(목) ~ 11. 24.(화)</td>
+          <td><span class="tl-badge" style="background:#FEF3C7;color:#78350F;">별도</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="alert warning">
+      <span class="alert-icon">📋</span>
+      <div>
+        <strong>원서 작성·제출 방법</strong>
+        도내 졸업(예정)자는 <strong>고입전형 지원 온라인시스템</strong>에서 개인이 직접 작성 후 제출하고, 출신 중학교에서 확인하여 고등학교로 전송합니다. 세부 방법은 추후 <strong>경남고입포털</strong>을 통해 안내 예정입니다.
+      </div>
+    </div>
+
+    <div style="margin-top:24px;">
+      <div class="section-title" style="font-size:16px;margin-bottom:12px;">
+        <div class="icon-circle" style="background:#FDF2F8;font-size:16px;">📆</div>
+        주요 일정 타임라인
+      </div>
+      <div class="timeline">
+        <div class="timeline-item done">
+          <div class="tl-date">2026. 6월</div>
+          <div class="tl-school">특수교육대상자 신청</div>
+          <div class="tl-period">6. 29.(월) ~ 7. 3.(금) — 교육지원청 특수교육지원센터</div>
+        </div>
+        <div class="timeline-item upcoming">
+          <div class="tl-date">2026. 7월</div>
+          <div class="tl-school">공군항공과학고 원서접수</div>
+          <div class="tl-period">7. 13.(월) ~ 7. 17.(금)</div>
+          <div class="tl-badge" style="background:#DBEAFE;color:#1E40AF;">마이스터고 최초</div>
+        </div>
+        <div class="timeline-item upcoming">
+          <div class="tl-date">2026. 8월</div>
+          <div class="tl-school">과학고 · 체육고 원서접수</div>
+          <div class="tl-period">8. 24.(월) ~ 8. 27.(목)</div>
+        </div>
+        <div class="timeline-item upcoming">
+          <div class="tl-date">2026. 9~10월</div>
+          <div class="tl-school">체육특기자 서류제출 / 예술고 · 마이스터고(3개교) 원서</div>
+          <div class="tl-period">9. 28.~9.30. 체육특기자 | 10. 12.~15. 예술고 | 10. 19.~22. 마이스터고</div>
+        </div>
+        <div class="timeline-item upcoming">
+          <div class="tl-date">2026. 11월</div>
+          <div class="tl-school">인재양성 특성화고 / 체험위주특성화고 / 각종학교 원서접수</div>
+          <div class="tl-period">11. 18.(수) 교과 내신 마감 | 11. 20.~12. 1. 원서접수</div>
+        </div>
+        <div class="timeline-item upcoming">
+          <div class="tl-date">2026. 12월</div>
+          <div class="tl-school">외국어고 · 일반고 원서접수 (후기고)</div>
+          <div class="tl-period">12. 10.(목) ~ 12. 14.(월)</div>
+          <div class="tl-badge" style="background:#FCE7F3;color:#9D174D;">후기고</div>
+        </div>
+        <div class="timeline-item upcoming">
+          <div class="tl-date">2027. 1월</div>
+          <div class="tl-school">평준화지역 합격자·배정학교 발표</div>
+          <div class="tl-period">합격자: 1. 8.(금) | 배정학교: 1. 15.(금)</div>
+          <div class="tl-badge" style="background:#D1FAE5;color:#065F46;">최종 결과</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert info" style="margin-top:8px;">
+      <span class="alert-icon">🌐</span>
+      <div>
+        <strong>전입학 제한일 확인 필수!</strong>
+        타 시군 또는 타 시도로 이사 계획이 있다면 전입학 제한일을 반드시 확인하세요. <strong>경남은 10월 31일까지</strong> 입니다.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TAB 3: 이중지원 체크 ===== -->
+  <div id="tab-double" class="section">
+    <div class="section-title">
+      <div class="icon-circle" style="background:#FFF5F5;">⚠️</div>
+      이중지원 체크리스트
+    </div>
+    <p class="section-desc">이중지원이면 지원한 학교 모두 불합격! 내 상황이 이중지원에 해당하는지 확인하세요.</p>
+
+    <div class="alert danger">
+      <span class="alert-icon">🚨</span>
+      <div>
+        <strong>이중지원은 절대 금지!</strong>
+        이중지원으로 합격 시 <strong>모든 학교 합격이 취소</strong>됩니다. 담임선생님과 꼭 확인하세요!
+      </div>
+    </div>
+
+    <div style="margin:24px 0 12px;font-weight:900;font-size:16px;font-family:'Nanum Round Square',sans-serif;">
+      ✅ 이중지원 해당 사례 확인하기
+    </div>
+    <p style="font-size:14px;color:var(--text-sub);margin-bottom:16px;">해당하는 항목을 클릭해서 체크해보세요. 하나라도 해당되면 이중지원입니다.</p>
+
+    <div class="check-list" id="checkList">
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div>한 학교에 지원하여 전형에 <strong>합격한 자</strong>가 다른 학교에 지원하는 경우</div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div>한 학교에 지원하여 <strong>불합격이 확정되지 않은 자</strong>가 다른 학교에 지원하는 경우</div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div>타 시도 전기학교에 지원한 자가 <strong>도내(타 시도) 전기학교에 지원</strong>하는 경우</div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div><strong>전기학교 합격자</strong>가 후기학교에 지원하는 경우</div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div>전기(후기)학교 전형에 합격한 자가 <strong>추가모집 또는 수시모집</strong>에 지원하는 경우</div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div>고등학교에 합격 후 <strong>미등록 또는 학년 초 자퇴</strong>하고, 같은 학년도에 다른 학교 수시모집에 신입학 지원하는 경우</div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div>외고·국제고·자사고 지원자가 <strong>학교장 전형 고등학교에 동시 지원</strong>하는 경우<br><small style="color:var(--text-muted)">단, 외고·국제고·자사고 지원자는 평준화지역 일반고에 동시 지원 가능</small></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div><strong>특수교육대상자로 선정·배치</strong>된 학생이 다른 학교에 지원하는 경우</div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div><strong>영재학교 합격자</strong>가 전·후기 고등학교에 지원하는 경우 (영재교육진흥법 적용)</div>
+      </div>
+    </div>
+
+    <div id="checkStatus" class="check-status">
+      <div style="font-size:32px;margin-bottom:8px;">🤔</div>
+      <div style="font-weight:700;font-size:16px;">위 항목 중 해당되는 것이 있나요?</div>
+      <div style="font-size:14px;color:var(--text-sub);margin-top:6px;">항목을 클릭해서 확인해보세요</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="font-weight:900;font-size:16px;font-family:'Nanum Round Square',sans-serif;margin-bottom:12px;">
+      ✅ 이중지원이 아닌 경우 (예외)
+    </div>
+    <div class="info-grid">
+      <div style="background:var(--success-light);border-radius:var(--radius-sm);border:1px solid #A7F3D0;padding:16px;font-size:14px;">
+        <div style="font-weight:700;color:#065F46;margin-bottom:8px;">✅ 허용 사례 1</div>
+        <p style="color:var(--text-sub);">한 학교에 불합격한 자가 전·후기 미달학교 추가모집에 지원하여 합격 후, 추가합격 통지를 받은 경우 → 지원자가 선택하여 등록 가능</p>
+      </div>
+      <div style="background:var(--success-light);border-radius:var(--radius-sm);border:1px solid #A7F3D0;padding:16px;font-size:14px;">
+        <div style="font-weight:700;color:#065F46;margin-bottom:8px;">✅ 허용 사례 2</div>
+        <p style="color:var(--text-sub);">외고·국제고·자사고 지원자 + 평준화지역 일반고 동시 지원 → 허용!</p>
+      </div>
+      <div style="background:var(--success-light);border-radius:var(--radius-sm);border:1px solid #A7F3D0;padding:16px;font-size:14px;">
+        <div style="font-weight:700;color:#065F46;margin-bottom:8px;">✅ 허용 사례 3</div>
+        <p style="color:var(--text-sub);">마이스터고 불합격자 → 인재양성 특성화고 지원 가능</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TAB 4: 진단 퀴즈 ===== -->
+  <div id="tab-quiz" class="section">
+    <div class="section-title">
+      <div class="icon-circle" style="background:#F3EEFF;">🎯</div>
+      나에게 맞는 학교 찾기
+    </div>
+    <p class="section-desc">몇 가지 질문에 답하면 나에게 잘 맞는 고등학교 유형을 추천해 드려요!</p>
+
+    <div class="quiz-wrap">
+      <div class="quiz-progress" id="quizProgress">
+        <div class="quiz-dot active"></div>
+        <div class="quiz-dot"></div>
+        <div class="quiz-dot"></div>
+        <div class="quiz-dot"></div>
+      </div>
+
+      <!-- Q1 -->
+      <div class="quiz-step active" id="q1">
+        <div class="quiz-q">졸업 후 어떤 길을 걷고 싶나요?</div>
+        <div class="quiz-sub">가장 원하는 진로를 선택해주세요</div>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="answer(1,'대학진학')">
+            <span class="opt-emoji">🎓</span> 대학에 진학하고 싶어요
+          </div>
+          <div class="quiz-option" onclick="answer(1,'취업')">
+            <span class="opt-emoji">💼</span> 고졸 후 바로 취업하고 싶어요
+          </div>
+          <div class="quiz-option" onclick="answer(1,'둘다')">
+            <span class="opt-emoji">🤔</span> 아직 결정하지 못했어요
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="quiz-step" id="q2">
+        <div class="quiz-q">가장 자신있거나 좋아하는 분야가 있나요?</div>
+        <div class="quiz-sub">여러 개 해당되면 가장 강한 것을 선택해주세요</div>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="answer(2,'과학수학')">
+            <span class="opt-emoji">🔬</span> 과학·수학이요!
+          </div>
+          <div class="quiz-option" onclick="answer(2,'예체능')">
+            <span class="opt-emoji">🎨</span> 예술·체육이요!
+          </div>
+          <div class="quiz-option" onclick="answer(2,'외국어')">
+            <span class="opt-emoji">🌍</span> 외국어·국제분야요!
+          </div>
+          <div class="quiz-option" onclick="answer(2,'직업기술')">
+            <span class="opt-emoji">🔧</span> 특정 직업·기술 분야요!
+          </div>
+          <div class="quiz-option" onclick="answer(2,'없음')">
+            <span class="opt-emoji">📚</span> 아직 특별히 없어요
+          </div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="quiz-step" id="q3">
+        <div class="quiz-q">학교생활에서 어떤 경험을 원하나요?</div>
+        <div class="quiz-sub">학교 분위기나 특색을 선택해주세요</div>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="answer(3,'다양한')">
+            <span class="opt-emoji">🌈</span> 다양한 과목을 폭넓게 배우고 싶어요
+          </div>
+          <div class="quiz-option" onclick="answer(3,'전문적')">
+            <span class="opt-emoji">🏆</span> 전문 분야를 깊이 있게 배우고 싶어요
+          </div>
+          <div class="quiz-option" onclick="answer(3,'체험')">
+            <span class="opt-emoji">🌿</span> 자연·체험 중심의 색다른 학교생활을 원해요
+          </div>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="quiz-step" id="q4">
+        <div class="quiz-q">집에서 통학하는 것과 기숙사 생활, 어떤 것을 선호하나요?</div>
+        <div class="quiz-sub">생활 방식을 선택해주세요</div>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="answer(4,'통학')">
+            <span class="opt-emoji">🏠</span> 집에서 통학하는 게 좋아요
+          </div>
+          <div class="quiz-option" onclick="answer(4,'기숙사')">
+            <span class="opt-emoji">🏫</span> 기숙사 생활도 괜찮아요
+          </div>
+          <div class="quiz-option" onclick="answer(4,'상관없음')">
+            <span class="opt-emoji">💭</span> 어떤 것이든 상관없어요
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULT -->
+      <div class="quiz-step" id="qResult">
+        <div id="resultContent"></div>
+        <div class="flex-row mt-24" style="justify-content:center;">
+          <button class="btn btn-outline btn-sm" onclick="resetQuiz()">🔄 다시 해보기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TAB 5: 꼭 알아야 할 것 ===== -->
+  <div id="tab-info" class="section">
+    <div class="section-title">
+      <div class="icon-circle" style="background:#FFF7E6;">📌</div>
+      꼭 알아야 할 핵심 정보
+    </div>
+    <p class="section-desc">학생·학부모·선생님 모두가 반드시 확인해야 할 중요한 내용들이에요.</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:var(--primary-light);">📌</div>
+          <div class="ic-title">학교 지원 핵심 원칙</div>
+        </div>
+        <ul>
+          <li>학교장전형교는 <strong>1개 학교만</strong> 선택 지원 (타 시도 포함)</li>
+          <li>평준화지역 희망 시 <strong>1개 학군</strong> 선택, 학군 내 지망순서별 전체 지원</li>
+          <li>졸업예정자(현 중3)는 <strong>중학교 소재지</strong> 기준으로 지원 가능 학군 결정</li>
+          <li>졸업자·학력인정자는 <strong>주소지</strong> 기준으로 지원 가능 학군 결정</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:var(--accent-light);">🔴</div>
+          <div class="ic-title">합격 후 주의사항</div>
+        </div>
+        <ul>
+          <li>1교에 합격 시 <strong>2027학년도 어떤 전형에도 지원 불가</strong> (전국 공통)</li>
+          <li>2028학년도 전형에는 지원 가능</li>
+          <li><strong>이중지원 시 모두 불합격</strong> 처리</li>
+          <li>고교 졸업자는 재입학 제한 (검정고시 합격자는 가능)</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:var(--success-light);">✅</div>
+          <div class="ic-title">불합격 시 대처법</div>
+        </div>
+        <ul>
+          <li>전·후기 미달 학교에 <strong>추가모집, 수시모집</strong>으로 지원 가능</li>
+          <li>경남은 전체 입학정원 &gt; 졸업생 수이므로 <strong>진학 못하는 경우 없음</strong></li>
+          <li>수시모집 마감: <strong>2027. 5. 21.(금)</strong>까지</li>
+          <li>다만 선호도 높은 학교는 경쟁으로 불합격 가능</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:var(--purple-light);">🏛️</div>
+          <div class="ic-title">평준화 학군 정보</div>
+        </div>
+        <ul>
+          <li><strong>1학군:</strong> 창원시 성산구·의창구</li>
+          <li><strong>2학군:</strong> 창원시 마산 합포구·회원구</li>
+          <li><strong>3학군:</strong> 진주시</li>
+          <li><strong>4학군:</strong> 김해시</li>
+          <li><strong>5학군:</strong> 거제시</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:var(--teal-light);">📊</div>
+          <div class="ic-title">내신성적 산출</div>
+        </div>
+        <ul>
+          <li>교과: <strong>2026. 11. 18.(수)</strong> 마감</li>
+          <li>비교과: <strong>2026. 11. 16.(월)</strong>까지 사항 반영</li>
+          <li>과학고·외고는 <strong>자기주도학습전형 100%</strong> 선발</li>
+          <li>과학고·외고는 <strong>사회통합전형</strong> 20% 이상 실시 (경남과고, 창원과고, 경남외고, 김해외고)</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:#FFF7E6;">🔗</div>
+          <div class="ic-title">도움이 되는 사이트</div>
+        </div>
+        <ul>
+          <li><strong>경남고입포털:</strong> <a href="https://highschool.gne.go.kr" target="_blank">highschool.gne.go.kr</a></li>
+          <li><strong>고입정보포털:</strong> <a href="https://www.hischool.go.kr" target="_blank">hischool.go.kr</a></li>
+          <li><strong>하이파이브(직업계고):</strong> <a href="https://www.hifive.go.kr" target="_blank">hifive.go.kr</a></li>
+          <li>고입 전형 문의: 진로교육과 <strong>☎ 268-1388</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="guarantee">
+      <div class="g-icon">💬</div>
+      <div>
+        <h3>담임선생님과 꼭 상담하세요!</h3>
+        <p>지원자격, 이중지원 해당 여부, 원서 접수일 등 중요한 사항은 반드시 담임선생님과 상담하고 정해진 일정에 맞춰 원서를 작성·제출하세요. 고입전형 지원 온라인시스템을 이용합니다.</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>경상남도교육청 · 2027학년도 고등학교 입학전형 기본계획 기반</p>
+  <p style="margin-top:6px;">문의: 진로교육과 ☎ 268-1388 | <a href="https://highschool.gne.go.kr" target="_blank">경남고입포털</a></p>
+</footer>
+
+<script>
+// GENDER SELECT
+const maleSchools = ['구산고등학교','가야고등학교','경원고등학교','삼방고등학교','영운고등학교','제일고등학교','김해고등학교','분성고등학교','임호고등학교'];
+const femaleSchools = ['구산고등학교','가야고등학교','경원고등학교','삼방고등학교','영운고등학교','제일고등학교','김해여자고등학교','분성여자고등학교','중앙여자고등학교'];
+const chipColors = {
+  '구산고등학교':'primary','가야고등학교':'primary','경원고등학교':'primary','삼방고등학교':'primary','영운고등학교':'primary','제일고등학교':'primary',
+  '김해고등학교':'blue','분성고등학교':'blue','임호고등학교':'blue',
+  '김해여자고등학교':'pink','분성여자고등학교':'pink','중앙여자고등학교':'pink'
+};
+const chipStyle = {
+  primary: 'background:var(--primary-light);color:var(--primary-dark);',
+  blue: 'background:#DBEAFE;color:#1E40AF;',
+  pink: 'background:#FCE7F3;color:#BE185D;'
+};
+
+function selectGender(g) {
+  const schools = g === 'male' ? maleSchools : femaleSchools;
+  document.getElementById('gender-guide').style.display = 'block';
+  document.getElementById('gender-placeholder').style.display = 'none';
+  document.getElementById('btn-male').className = 'btn btn-sm' + (g==='male' ? ' btn-primary' : ' btn-outline');
+  document.getElementById('btn-female').className = 'btn btn-sm' + (g==='female' ? ' btn-primary' : ' btn-outline');
+  document.getElementById('btn-male').style.flex = '1';
+  document.getElementById('btn-female').style.flex = '1';
+  document.getElementById('btn-male').style.justifyContent = 'center';
+  document.getElementById('btn-female').style.justifyContent = 'center';
+
+  const chips = schools.map(s => {
+    const c = chipColors[s] || 'primary';
+    const label = s.includes('여자') ? '여고' : (s.includes('임호')||s.includes('분성고')||s.includes('김해고')) ? '남고' : '공학';
+    return `<span style="display:inline-flex;align-items:center;gap:5px;border-radius:100px;padding:5px 12px;font-size:13px;font-weight:700;${chipStyle[c]}">${label === '여고' ? '👩' : label === '남고' ? '🧑' : '👫'} ${s}</span>`;
+  }).join('');
+  document.getElementById('school-chips').innerHTML = chips;
+
+  const exampleSchools = g === 'male'
+    ? ['가야고등학교','경원고등학교','구산고등학교','제일고등학교','삼방고등학교','김해고등학교','분성고등학교','영운고등학교','임호고등학교']
+    : ['경원고등학교','가야고등학교','김해여자고등학교','제일고등학교','구산고등학교','분성여자고등학교','삼방고등학교','중앙여자고등학교','영운고등학교'];
+  const rankColors = ['#4F6DF5','#4F6DF5','#4F6DF5','#8B5CF6','#8B5CF6','#8B5CF6','#14B8A6','#14B8A6','#14B8A6'];
+  const rankLabels = ['1지망','2지망','3지망','4지망','5지망','6지망','7지망','8지망','9지망'];
+  const rows = exampleSchools.map((s, i) => {
+    const c = chipColors[s] || 'primary';
+    return `<div style="display:flex;align-items:center;gap:10px;background:white;border-radius:8px;padding:8px 12px;border:1px solid var(--border);">
+      <span style="width:44px;text-align:center;font-size:12px;font-weight:700;color:${rankColors[i]};background:${rankColors[i]}18;border-radius:6px;padding:3px 0;">${rankLabels[i]}</span>
+      <span style="font-size:14px;font-weight:500;">${s}</span>
+    </div>`;
+  }).join('');
+  document.getElementById('rank-example').innerHTML = rows;
+}
+
+// TAB
+function showTab(tab) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  const tabs = ['types','junhwa','schedule','double','quiz','info'];
+  const idx = tabs.indexOf(tab);
+  if (idx >= 0) document.querySelectorAll('.nav-tab')[idx].classList.add('active');
+  window.scrollTo({top: document.querySelector('.nav-wrap').offsetTop - 10, behavior: 'smooth'});
+}
+
+// DETAIL PANEL
+function toggleDetail(id) {
+  const panel = document.getElementById(id);
+  const isOpen = panel.classList.contains('open');
+  document.querySelectorAll('.detail-panel').forEach(p => p.classList.remove('open'));
+  if (!isOpen) {
+    panel.classList.add('open');
+    setTimeout(() => panel.scrollIntoView({behavior:'smooth', block:'nearest'}), 100);
+  }
+}
+
+// CHECK LIST
+let checkedCount = 0;
+function toggleCheck(el) {
+  el.classList.toggle('checked');
+  checkedCount = document.querySelectorAll('.check-item.checked').length;
+  const status = document.getElementById('checkStatus');
+  if (checkedCount === 0) {
+    status.className = 'check-status';
+    status.innerHTML = '<div style="font-size:32px;margin-bottom:8px;">🤔</div><div style="font-weight:700;font-size:16px;">위 항목 중 해당되는 것이 있나요?</div><div style="font-size:14px;color:var(--text-sub);margin-top:6px;">항목을 클릭해서 확인해보세요</div>';
+  } else {
+    status.className = 'check-status warn';
+    status.innerHTML = '<div style="font-size:32px;margin-bottom:8px;">🚨</div><div style="font-weight:700;font-size:16px;color:#991B1B;">' + checkedCount + '개 항목이 해당됩니다!</div><div style="font-size:14px;color:#7F1D1D;margin-top:6px;">이중지원에 해당됩니다. 지원하면 모두 불합격 처리됩니다.<br>반드시 담임선생님과 상담하세요!</div>';
+  }
+}
+
+// QUIZ
+let answers = {};
+const results = {
+  '일반고': {
+    emoji: '📚',
+    type: '일반고 추천',
+    color: 'linear-gradient(135deg, #4F6DF5, #7C3AED)',
+    desc: '폭넓은 일반 교육과정으로 다양한 진로를 탐색하고 싶은 당신에게 일반고가 잘 맞아요! 대학 진학 후 전공을 결정할 수 있는 유연성이 있어요.',
+    tags: ['대학진학', '다양한 교육과정', '평준화 배정', '경남 150개교']
+  },
+  '과학고': {
+    emoji: '🔬',
+    type: '과학고 추천',
+    color: 'linear-gradient(135deg, #14B8A6, #0D9488)',
+    desc: '수학과 과학을 사랑하고 이 분야의 인재로 성장하고 싶다면 과학고가 최고의 선택! 자기주도학습전형으로 선발되며 깊이 있는 이공계 교육을 받을 수 있어요.',
+    tags: ['과학·수학 특화', '자기주도학습전형', '이공계 진학', '경남과학고·창원과학고']
+  },
+  '예술고_체육고': {
+    emoji: '🎨',
+    type: '예술고·체육고 추천',
+    color: 'linear-gradient(135deg, #EC4899, #BE185D)',
+    desc: '예술이나 체육에 특별한 재능과 꿈이 있다면 특목고인 예술고나 체육고가 딱이에요! 전문적인 실기 교육으로 실력을 키울 수 있어요.',
+    tags: ['전문 실기 교육', '특기 적성 발휘', '경남예술고', '경남체육고']
+  },
+  '외국어고': {
+    emoji: '🌍',
+    type: '외국어고 추천',
+    color: 'linear-gradient(135deg, #F59E0B, #D97706)',
+    desc: '언어에 재능이 있고 글로벌한 커리어를 꿈꾼다면 외국어고가 맞아요! 자기주도학습전형으로 선발되며 사회통합전형도 운영돼요.',
+    tags: ['외국어 특화', '글로벌 교육', '경남외고·김해외고', '후기고']
+  },
+  '마이스터고': {
+    emoji: '🔧',
+    type: '마이스터고 추천',
+    color: 'linear-gradient(135deg, #6366F1, #4F46E5)',
+    desc: '특정 산업 분야의 전문가가 되고 싶다면 마이스터고가 최고예요! 기숙사 생활을 하며 취업을 목표로 심화 기술 교육을 받을 수 있어요.',
+    tags: ['취업 중심', '기술 전문 교육', '기숙사 생활', '전기고 최우선']
+  },
+  '인재양성특성화고': {
+    emoji: '🏅',
+    type: '인재양성 특성화고 추천',
+    color: 'linear-gradient(135deg, #8B5CF6, #7C3AED)',
+    desc: '특정 직업 분야에 관심이 있고 전문 기술을 배우고 싶다면 인재양성 특성화고가 좋아요! 취업과 진학 모두 가능한 선택이에요.',
+    tags: ['직업교육', '취업+진학 가능', '전기고', '31개교']
+  },
+  '체험위주특성화고': {
+    emoji: '🌿',
+    type: '체험위주 특성화고 추천',
+    color: 'linear-gradient(135deg, #22C55E, #16A34A)',
+    desc: '일반적인 학교 환경이 아닌 자연 속에서 체험 중심으로 배우고 싶다면 체험위주 특성화고가 특별한 선택이 될 거예요!',
+    tags: ['자연·체험 교육', '대안교육', '태봉고·간디고·지리산고·합천평화고', '기숙사']
+  }
+};
+
+function answer(q, val) {
+  answers[q] = val;
+  document.querySelectorAll(`#q${q} .quiz-option`).forEach(o => o.classList.remove('selected'));
+  event.currentTarget.classList.add('selected');
+
+  setTimeout(() => {
+    const dots = document.querySelectorAll('.quiz-dot');
+    if (q < 4) {
+      document.getElementById('q' + q).classList.remove('active');
+      document.getElementById('q' + (q + 1)).classList.add('active');
+      dots.forEach((d, i) => {
+        d.classList.remove('active', 'done');
+        if (i < q) d.classList.add('done');
+        if (i === q) d.classList.add('active');
+      });
+    } else {
+      dots.forEach(d => { d.classList.remove('active'); d.classList.add('done'); });
+      document.getElementById('q4').classList.remove('active');
+      showResult();
+    }
+  }, 350);
+}
+
+function showResult() {
+  const a1 = answers[1], a2 = answers[2], a3 = answers[3], a4 = answers[4];
+  let type = '일반고';
+  
+  if (a1 === '취업') {
+    if (a2 === '직업기술') type = 'maister_or_teuksung';
+    else type = '인재양성특성화고';
+  } else if (a2 === '과학수학') {
+    type = '과학고';
+  } else if (a2 === '예체능') {
+    type = '예술고_체육고';
+  } else if (a2 === '외국어') {
+    type = '외국어고';
+  } else if (a2 === '직업기술') {
+    if (a4 === '기숙사' || a4 === '상관없음') type = '마이스터고';
+    else type = '인재양성특성화고';
+  } else if (a3 === '체험') {
+    type = '체험위주특성화고';
+  } else {
+    type = '일반고';
+  }
+
+  if (type === 'maister_or_teuksung') type = a4 === '기숙사' ? '마이스터고' : '인재양성특성화고';
+
+  const r = results[type] || results['일반고'];
+  const html = `
+    <div class="result-card" style="background:${r.color};color:white;">
+      <div class="result-emoji">${r.emoji}</div>
+      <div class="result-type">${r.type}</div>
+      <div class="result-desc">${r.desc}</div>
+      <div class="result-tags">${r.tags.map(t => `<span class="result-tag">${t}</span>`).join('')}</div>
+    </div>
+    <div class="alert info">
+      <span class="alert-icon">💡</span>
+      <div><strong>이것은 참고용 추천이에요!</strong> 실제 진학은 학교 홈페이지와 담임선생님 상담을 통해 구체적인 전형 방법, 필요 서류, 지원 자격 등을 확인하세요.</div>
+    </div>
+  `;
+  document.getElementById('resultContent').innerHTML = html;
+  document.getElementById('qResult').classList.add('active');
+}
+
+function resetQuiz() {
+  answers = {};
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('q1').classList.add('active');
+  document.querySelectorAll('.quiz-dot').forEach((d, i) => {
+    d.classList.remove('done');
+    d.classList.toggle('active', i === 0);
+  });
+  document.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+}
+</script>
+</body>
+</html>
