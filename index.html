@@ -730,6 +730,7 @@ footer a:hover { text-decoration: underline; }
 <div class="nav-wrap">
   <div class="nav-tabs">
     <button class="nav-tab active" onclick="showTab('types')">🏫 학교 유형</button>
+    <button class="nav-tab" onclick="showTab('naesin')">📊 내신성적 산출기준</button>
     <button class="nav-tab" onclick="showTab('junhwa')">🏙️ 김해 평준화 지원</button>
     <button class="nav-tab" onclick="showTab('schedule')">📅 원서 일정</button>
     <button class="nav-tab" onclick="showTab('double')">⚠️ 이중지원 체크</button>
@@ -937,6 +938,336 @@ footer a:hover { text-decoration: underline; }
         <strong>핵심 규칙 — 반드시 기억!</strong>
         전기고에 합격한 자는 등록 여부에 관계없이 후기고 지원이 불가합니다. 1개교에 합격하면 2027학년도 어떤 전형에도 지원할 수 없어요!
       </div>
+    </div>
+  </div>
+
+  <!-- ===== TAB: 내신성적 산출기준 ===== -->
+  <div id="tab-naesin" class="section">
+    <div class="section-title">
+      <div class="icon-circle" style="background:var(--teal-light);">📊</div>
+      내신성적 산출 지침
+    </div>
+    <p class="section-desc">2027학년도 고등학교 입학전형을 위한 내신성적 산출 지침을 정리했어요. (경상남도교육청 기준)</p>
+
+    <div class="info-grid" style="margin-bottom:24px;">
+      <div class="info-card">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:var(--primary-light);">🎯</div>
+          <div class="ic-title">목적</div>
+        </div>
+        <ul>
+          <li>중학교 교육과정 운영의 내실화</li>
+          <li>중·고등학교 교육 연계 체제 확립</li>
+          <li>입학 적격자 선발의 합리성·공정성 확보</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:var(--accent-light);">👤</div>
+          <div class="ic-title">적용 대상 · 산출 근거</div>
+        </div>
+        <ul>
+          <li><strong>2026학년도 경남 중학교 졸업예정자</strong> 등에게 적용</li>
+          <li>내신성적은 <strong>학교생활기록부</strong> 기록에 근거하여 산출</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:var(--warning-light);">📅</div>
+          <div class="ic-title">기준일</div>
+        </div>
+        <ul>
+          <li><strong>교과:</strong> 3학년 2학기 2차 고사까지 반영, <strong>2026. 11. 18.(수)</strong>까지 산출</li>
+          <li><strong>비교과:</strong> <strong>2026. 11. 16.(월)</strong>까지의 사항 반영</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:var(--success-light);">🏆</div>
+          <div class="ic-title">총점 · 사정 자료</div>
+        </div>
+        <ul>
+          <li>내신성적 <strong>총점 200점</strong></li>
+          <li>이를 기초로 산출한 <strong>내신석차 백분율</strong>을 합격자 사정 자료로 활용</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-title" style="font-size:18px;margin-bottom:12px;">
+      <div class="icon-circle" style="background:var(--primary-light);font-size:16px;">🧮</div>
+      영역별 배점 및 비율 (총점 200점)
+    </div>
+    <table class="schedule-table" style="margin-bottom:16px;">
+      <thead>
+        <tr>
+          <th>영역</th>
+          <th>세부 내용</th>
+          <th style="width:18%">배점</th>
+          <th style="width:14%">비율</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="school-type">교과</td>
+          <td style="font-size:13px;">성적이 존재하는 학기에 한해 학기별 동일 배점 부여 (1~3학년)</td>
+          <td class="date">160점</td>
+          <td class="date">80%</td>
+        </tr>
+        <tr>
+          <td class="school-type">비교과 – 출결상황</td>
+          <td style="font-size:13px;">학년별 10점 × 3개 학년</td>
+          <td class="date">30점</td>
+          <td class="date">15%</td>
+        </tr>
+        <tr>
+          <td class="school-type">비교과 – 학교활동</td>
+          <td style="font-size:13px;">기본점 4점 + 학년별 가산점(최대 2점×3개 학년)</td>
+          <td class="date">10점</td>
+          <td class="date">5%</td>
+        </tr>
+        <tr style="background:#FFFBEB;">
+          <td class="school-type">합계</td>
+          <td></td>
+          <td class="date"><strong>200점</strong></td>
+          <td class="date"><strong>100%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="alert info">
+      <span class="alert-icon">📋</span>
+      <div>
+        <strong>석차연명부</strong>
+        중학교는 내신석차 백분율이 기록된 「석차연명부」를 작성하여 전형에 활용합니다. 경우에 따라 ‘내신성적 통지표’ 또는 ‘내신성적 증명서’를 대신 활용할 수 있습니다.
+      </div>
+    </div>
+
+    <div class="divider" style="height:1px;background:var(--border);margin:28px 0;"></div>
+
+    <div class="section-title" style="font-size:18px;margin-bottom:6px;">
+      <div class="icon-circle" style="background:var(--teal-light);font-size:16px;">👥</div>
+      대상자별 산출 방법
+    </div>
+    <p class="section-desc" style="margin-bottom:16px;">카드를 눌러 대상자 유형별 세부 산출 방법을 확인하세요.</p>
+
+    <div class="cards-grid">
+      <div class="school-card blue" onclick="toggleDetail('d-naesin-jol')">
+        <div class="card-emoji">🏫</div>
+        <div class="card-title">졸업예정자(경남)</div>
+        <div class="card-count">교과·출결·학교활동 산식</div>
+        <div class="card-desc">경남 중학교 재학 중인 현 중3 졸업예정자의 표준 산출 방법</div>
+        <div class="card-arrow">›</div>
+      </div>
+      <div class="school-card teal" onclick="toggleDetail('d-naesin-tasido')">
+        <div class="card-emoji">🌐</div>
+        <div class="card-title">타 시도 졸업(예정)자</div>
+        <div class="card-count">기준학교: 감계중학교</div>
+        <div class="card-desc">타 시도 내신 규정 적용 또는 기준학교 준용 방식</div>
+        <div class="card-arrow">›</div>
+      </div>
+      <div class="school-card purple" onclick="toggleDetail('d-naesin-graduate')">
+        <div class="card-emoji">🎓</div>
+        <div class="card-title">졸업자</div>
+        <div class="card-count">졸업연도별 3가지 방식</div>
+        <div class="card-desc">석차연명부 유무·졸업 시기에 따라 산출 방식이 다름</div>
+        <div class="card-arrow">›</div>
+      </div>
+      <div class="school-card pink" onclick="toggleDetail('d-naesin-geomjeong')">
+        <div class="card-emoji">📝</div>
+        <div class="card-title">검정고시 합격자</div>
+        <div class="card-count">조견표 적용</div>
+        <div class="card-desc">경남교육청 조견표로 석차백분율을 환산</div>
+        <div class="card-arrow">›</div>
+      </div>
+    </div>
+
+    <!-- 졸업예정자(경남) 상세 -->
+    <div id="d-naesin-jol" class="detail-panel">
+      <div class="detail-header">
+        <span class="emoji">🏫</span>
+        <div>
+          <h3>졸업예정자(경남) 산출 방법</h3>
+          <p style="font-size:13px;color:var(--text-sub)">교과 160점 + 출결 30점 + 학교활동 10점</p>
+        </div>
+        <button class="detail-close" onclick="toggleDetail('d-naesin-jol')">✕</button>
+      </div>
+
+      <div style="font-weight:700;font-size:14px;margin-bottom:8px;color:var(--primary-dark);">① 교과 점수 (160점, 80%)</div>
+      <ul class="school-list" style="margin-bottom:12px;">
+        <li>학기별 점수의 총합으로 산출하며, 성적이 존재하지 않는 학기는 제외</li>
+        <li>학기별 점수 = (성취도 환산점 총합 ÷ 과목수) + (원점수 총합 ÷ 과목수, 체육·예술 제외) 를 기반으로 <strong>160 ÷ 성적 존재 학기 수</strong>를 곱해 산출</li>
+        <li>소수 다섯째 자리에서 반올림하여 <strong>소수 넷째 자리</strong>까지 산출</li>
+        <li>성취도 대신 ‘P’ 또는 ‘이수’로 기록된 과목은 산출에서 제외</li>
+      </ul>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:16px;">
+        <div style="background:var(--bg);border-radius:10px;padding:14px;">
+          <div style="font-weight:700;font-size:13px;margin-bottom:8px;">일반 교과 성취도 환산</div>
+          <table style="width:100%;font-size:12px;border-collapse:collapse;">
+            <tr style="color:var(--text-muted);"><td>성취도</td><td>A(수)</td><td>B(우)</td><td>C(미)</td><td>D(양)</td><td>E(가)</td></tr>
+            <tr style="color:var(--text-muted);"><td>득점</td><td>90↑</td><td>80~90</td><td>70~80</td><td>60~70</td><td>60↓</td></tr>
+            <tr style="font-weight:700;"><td>환산점</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
+          </table>
+        </div>
+        <div style="background:var(--bg);border-radius:10px;padding:14px;">
+          <div style="font-weight:700;font-size:13px;margin-bottom:8px;">체육·예술 교과 성취도 환산</div>
+          <table style="width:100%;font-size:12px;border-collapse:collapse;">
+            <tr style="color:var(--text-muted);"><td>성취도</td><td>A(우수)</td><td>B(보통)</td><td>C(미흡)</td></tr>
+            <tr style="color:var(--text-muted);"><td>득점</td><td>80↑</td><td>60~80</td><td>60↓</td></tr>
+            <tr style="font-weight:700;"><td>환산점</td><td>5</td><td>4</td><td>3</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div style="font-weight:700;font-size:14px;margin-bottom:8px;color:var(--primary-dark);">② 출결상황 점수 (30점, 15%)</div>
+      <ul class="school-list" style="margin-bottom:8px;">
+        <li>학년별 10점, 미인정 결석일수 기준으로 산출 후 합산</li>
+        <li>질병·기타 결석은 제외, <strong>미인정 결석만</strong> 반영</li>
+        <li>미인정 지각·조퇴·결과는 종류 무관 합산하여 <strong>3회 = 결석 1일</strong> (3회 미만은 버림)</li>
+      </ul>
+      <table class="schedule-table" style="margin-bottom:16px;">
+        <thead><tr><th>미인정 결석일수</th><th>0</th><th>1~2</th><th>3~4</th><th>5~6</th><th>7~8</th><th>9~10</th><th>11~12</th><th>13~14</th><th>15↑</th></tr></thead>
+        <tbody><tr><td class="school-type">학년별 점수</td><td>10.0</td><td>9.5</td><td>9.0</td><td>8.5</td><td>8.0</td><td>7.5</td><td>7.0</td><td>6.5</td><td>6.0</td></tr></tbody>
+      </table>
+
+      <div style="font-weight:700;font-size:14px;margin-bottom:8px;color:var(--primary-dark);">③ 학교활동 점수 (10점, 5%)</div>
+      <ul class="school-list" style="margin-bottom:12px;">
+        <li><strong>기본점 4점</strong> + 학년별 가산점(학년당 최대 2점, 3개 학년 합산)</li>
+        <li>가산 기준(대상·기간·횟수·점수)은 학업성적관리위원회 심의를 거쳐 학교장이 정함</li>
+      </ul>
+      <div style="background:var(--bg);border-radius:10px;padding:14px;margin-bottom:16px;">
+        <div style="font-weight:700;font-size:13px;margin-bottom:6px;">가산점 인정 기준 (예시)</div>
+        <ul class="school-list">
+          <li>모범학생 표창(상), 효행상, 선행상, 봉사상 : 0.5점 (동일 공적 중복 시 1건만 인정)</li>
+          <li>각종 교내 대회 학교장 표창(상) : 0.5점</li>
+          <li>학생회·학급회·동아리 임원 6개월 이상 활동 : 0.5점 (자율·동아리 임원 겸임 시 1건만 인정)</li>
+        </ul>
+      </div>
+
+      <div style="font-weight:700;font-size:14px;margin-bottom:8px;color:var(--primary-dark);">④ 석차 · 석차백분율</div>
+      <ul class="school-list" style="margin-bottom:8px;">
+        <li>석차는 총점 기준, 남녀 구별 없이 통합 산출</li>
+        <li>총점 동점 시 <strong>교과 → 출결상황 → 학교활동</strong> 고득점 순으로 산출, 그래도 같으면 동석차</li>
+      </ul>
+      <div style="background:var(--primary-light);border-radius:10px;padding:14px;text-align:center;font-weight:700;color:var(--primary-dark);margin-bottom:12px;">
+        석차백분율 = 석차 ÷ 3학년 재적수 × 100 (소수 셋째 자리에서 반올림)
+      </div>
+      <div class="alert warning">
+        <span class="alert-icon">⚠️</span>
+        <div>
+          <strong>소인수 학교(3학년 재적수 13명 미만) 보정</strong>
+          실제 재적수 기준 석차연명부를 우선 작성하고, 별도로 <strong>가상 재적수 13명</strong>을 기준으로 석차백분율을 보정한 석차연명부를 추가 작성하여 고입 전형에 활용합니다. 3학년 재적수는 교과성적 산출 기준일(2026. 11. 18.) 인원 기준입니다.
+        </div>
+      </div>
+    </div>
+
+    <!-- 타 시도 상세 -->
+    <div id="d-naesin-tasido" class="detail-panel">
+      <div class="detail-header">
+        <span class="emoji">🌐</span>
+        <div>
+          <h3>타 시도 졸업(예정)자</h3>
+          <p style="font-size:13px;color:var(--text-sub)">2027학년도 기준학교: 감계중학교</p>
+        </div>
+        <button class="detail-close" onclick="toggleDetail('d-naesin-tasido')">✕</button>
+      </div>
+      <ul class="school-list" style="margin-bottom:12px;">
+        <li>당해 시·도의 내신성적 산출 규정에 따라 산출된 석차연명부(석차백분율 기록)를 그대로 적용</li>
+        <li>단, 석차를 보정해 석차백분율을 산출하는 시·도(부산·충남·전남: (석차-0.5)÷재적수×100)의 졸업(예정)자는 재산출하여 적용</li>
+      </ul>
+      <div class="alert info">
+        <span class="alert-icon">ℹ️</span>
+        <div>
+          <strong>석차연명부가 없는 경우</strong>
+          학교장 전형교 지원 시 해당 고교 입학전형위원회가 별도로 정함. 평준화지역 지원 시 본 지침에 따라 학기별 개인 교과 성적 총합을 산출하고, 학년·학기별 석차백분율은 <strong>기준학교(2027학년도: 감계중학교)</strong>의 동일 교과성적 총합 학생 석차백분율을 준용합니다. 지원자 성적이 기준치와 다르면 가장 가까운 차하위 근사치를 적용합니다.
+        </div>
+      </div>
+    </div>
+
+    <!-- 졸업자 상세 -->
+    <div id="d-naesin-graduate" class="detail-panel">
+      <div class="detail-header">
+        <span class="emoji">🎓</span>
+        <div>
+          <h3>졸업자</h3>
+          <p style="font-size:13px;color:var(--text-sub)">석차연명부 유무 및 졸업 시기에 따라 구분</p>
+        </div>
+        <button class="detail-close" onclick="toggleDetail('d-naesin-graduate')">✕</button>
+      </div>
+      <div class="alert success" style="margin-bottom:14px;">
+        <span class="alert-icon">✅</span>
+        <div><strong>석차연명부가 있는 경우</strong> 졸업 당해의 내신 석차백분율을 그대로 인정합니다.</div>
+      </div>
+      <div style="font-weight:700;font-size:14px;margin-bottom:8px;">석차연명부가 없는 경우 (비교과 영역 제외)</div>
+      <div style="display:grid;gap:12px;">
+        <div style="background:var(--bg);border-radius:10px;padding:14px;">
+          <div style="font-weight:700;font-size:13px;margin-bottom:6px;color:var(--primary-dark);">2015. 2. 졸업자</div>
+          <p style="font-size:13px;color:var(--text-sub);">타 시·도 졸업예정자와 동일한 방식으로 산출</p>
+        </div>
+        <div style="background:var(--bg);border-radius:10px;padding:14px;">
+          <div style="font-weight:700;font-size:13px;margin-bottom:6px;color:var(--primary-dark);">1997. 2. ~ 2014. 2. 졸업자</div>
+          <p style="font-size:13px;color:var(--text-sub);">3학년 과목별 석차·재적수로 산출한 과목별 석차백분율의 평균을 내신성적 석차백분율로 함 (「내신성적 증명서」 작성)</p>
+          <div style="font-size:12px;background:white;border-radius:8px;padding:10px;margin-top:8px;border:1px solid var(--border);">
+            석차백분율 = (1학기 + 2학기 석차백분율) ÷ 2 (소수 셋째 자리 반올림)<br>
+            학기별 석차백분율 = 과목별 석차백분율 합 ÷ 이수 과목 수<br>
+            과목별 석차백분율 = 과목별 석차 ÷ 과목별 재적수 × 100
+          </div>
+        </div>
+        <div style="background:var(--bg);border-radius:10px;padding:14px;">
+          <div style="font-weight:700;font-size:13px;margin-bottom:6px;color:var(--primary-dark);">1996. 2. 이전 졸업자</div>
+          <p style="font-size:13px;color:var(--text-sub);">3학년 석차·재적수를 이용해 산출 (「내신성적 증명서」 작성)</p>
+          <div style="font-size:12px;background:white;border-radius:8px;padding:10px;margin-top:8px;border:1px solid var(--border);">
+            석차백분율 = 석차 ÷ 재적수 × 100 (소수 셋째 자리 반올림)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 검정고시 상세 -->
+    <div id="d-naesin-geomjeong" class="detail-panel">
+      <div class="detail-header">
+        <span class="emoji">📝</span>
+        <div>
+          <h3>검정고시 합격자</h3>
+          <p style="font-size:13px;color:var(--text-sub)">경남교육청 조견표 기준 적용</p>
+        </div>
+        <button class="detail-close" onclick="toggleDetail('d-naesin-geomjeong')">✕</button>
+      </div>
+      <ul class="school-list" style="margin-bottom:12px;">
+        <li>중학교 졸업학력 검정고시 합격자는 합격 시·도에 관계없이 <strong>경상남도교육청 중학교 졸업학력 검정고시 합격자 석차백분율 조견표</strong>를 따름 (구 고입자격 검정고시 합격자도 동일 적용)</li>
+        <li>석차백분율은 <strong>합격연도</strong>와 성적증명서상 <strong>평균점수</strong>를 기준으로 조견표를 참조하여 산출</li>
+        <li>조견표상 평균점수는 검정고시 성적증명서 평균점수를 <strong>소수 첫째 자리에서 반올림</strong>한 값 사용</li>
+      </ul>
+      <div class="alert info">
+        <span class="alert-icon">ℹ️</span>
+        <div>실제 조견표는 추후 도교육청 홈페이지 및 경남고입포털에 공지됩니다.</div>
+      </div>
+    </div>
+
+    <div class="divider" style="height:1px;background:var(--border);margin:28px 0;"></div>
+
+    <div class="section-title" style="font-size:18px;margin-bottom:12px;">
+      <div class="icon-circle" style="background:#FFF7E6;font-size:16px;">📎</div>
+      기타 사항
+    </div>
+    <div class="alert warning">
+      <span class="alert-icon">🏛️</span>
+      <div><strong>위탁교육 학생</strong> 「보호소년 등의 처우에 관한 법률」적용을 받아 위탁교육 형식으로 학적이 관리된 학생은 관련 법 제31조~34조에 따라 재학생 수에 포함하여 내신성적을 산출합니다.</div>
+    </div>
+    <div class="alert info">
+      <span class="alert-icon">✈️</span>
+      <div><strong>해외귀국자(미인정 유학자)</strong> 국내 취득 해당 학년 출결상황 증빙자료는 인정하나, 해외에서 취득한 자료는 인정하지 않습니다.</div>
+    </div>
+    <div class="alert success">
+      <span class="alert-icon">📄</span>
+      <div><strong>비교과 자료 불분명 시</strong> 각 영역별 기본점수를 부여합니다.</div>
+    </div>
+    <div class="alert danger">
+      <span class="alert-icon">🆘</span>
+      <div><strong>석차연명부가 없는 경우 등</strong> 「초·중등교육법 시행령」 제97조 해당자 및 내신석차연명부 마감일 이후 중도입국자 등은 <strong>최저점(100%)</strong>을 부여하여 지원할 수 있습니다.</div>
+    </div>
+    <div class="alert" style="background:var(--bg);border:1px solid var(--border);color:var(--text-sub);">
+      <span class="alert-icon">📚</span>
+      <div><strong style="color:var(--text);">기타 미규정 사항</strong> 교육부 학교생활기록 작성 및 관리 지침, 학교생활기록부 기재요령, 경상남도 중·고등학교 학업성적 관리 지침을 참조하여 중학교 학업성적관리위원회 심의를 거쳐 학교장이 정합니다.</div>
     </div>
   </div>
 
@@ -1602,7 +1933,7 @@ function showTab(tab) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('tab-' + tab).classList.add('active');
-  const tabs = ['types','junhwa','schedule','double','quiz','info'];
+  const tabs = ['types','naesin','junhwa','schedule','double','quiz','info'];
   const idx = tabs.indexOf(tab);
   if (idx >= 0) document.querySelectorAll('.nav-tab')[idx].classList.add('active');
   window.scrollTo({top: document.querySelector('.nav-wrap').offsetTop - 10, behavior: 'smooth'});
